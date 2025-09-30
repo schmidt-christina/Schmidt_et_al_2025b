@@ -10,6 +10,7 @@ import matplotlib.path as mpath
 path_database = '/g/data/e14/cs6673/Ross_salinity/Python_scripts_published/'
 path_output = '/g/data/e14/cs6673/Ross_salinity/data_analysis/'
 path_plots = '/g/data/e14/cs6673/Ross_salinity/plots/'
+path_data_published = '/g/data/e14/cs6673/Ross_salinity/Python_scripts_published/data_published/'
 
 exptdict = OrderedDict([
     ('ctrl',  # control
@@ -39,11 +40,19 @@ exptdict = OrderedDict([
      {'expt': 'access-om2-01_ryf_meltwater_50_down_over_1_yr',
       'expt_str': '',
       'pert_lon': [-150, -88],
-      'col': 'limegreen'}),
+      'col': 'b'}),
     ('era5',
      {'expt_str': 'ERA5',
       'u_file': '/g/data/rt52/era5/single-levels/monthly-averaged/10u/*/10u_era5_moda_sfc*.nc',
-      'v_file': '/g/data/rt52/era5/single-levels/monthly-averaged/10v/*/10v_era5_moda_sfc*.nc'})
+      'v_file': '/g/data/rt52/era5/single-levels/monthly-averaged/10v/*/10v_era5_moda_sfc*.nc'}),
+    ('iaf',
+     {'expt': '01deg_jra55v140_iaf_cycle3',
+      'expt_str': 'JRA_IAF',
+      'col': 'g',
+      'u_file': ('/g/data/ik11/inputs/JRA-55/MRI-JRA55-do/MRI-JRA55-do-1-4-0/atmos/uas/' +
+                 'uas_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-4-0_gr_*.nc'),
+      'v_file': ('/g/data/ik11/inputs/JRA-55/MRI-JRA55-do/MRI-JRA55-do-1-4-0/atmos/vas/' +
+                 'vas_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-4-0_gr_*.nc')})
 ])
 
 def yearly_mean(var):
