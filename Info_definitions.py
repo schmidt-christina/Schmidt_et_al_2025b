@@ -1,7 +1,7 @@
 from collections import OrderedDict
 import xarray as xr
 import numpy as np
-import cosima_cookbook as cc
+# import cosima_cookbook as cc
 import cf_xarray
 from metpy.interpolate import cross_section
 import pyproj
@@ -11,6 +11,7 @@ path_database = '/g/data/e14/cs6673/Ross_salinity/Python_scripts_published/'
 path_output = '/g/data/e14/cs6673/Ross_salinity/data_analysis/'
 path_plots = '/g/data/e14/cs6673/Ross_salinity/plots/'
 path_data_published = '/g/data/e14/cs6673/Ross_salinity/Python_scripts_published/data_published/'
+path_control = '/g/data/ik11/outputs/access-om2-01/01deg_jra55v13_ryf9091_rerun_for_easterlies/'
 
 exptdict = OrderedDict([
     ('ctrl',  # control
