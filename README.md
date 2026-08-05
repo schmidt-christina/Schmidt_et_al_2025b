@@ -6,6 +6,10 @@ This repository contains all scripts used to analysis the model output and produ
 
 * Python scripts to create all figures: Fig*.ipynb
 
+* Code to create pertubed forcing fields: 
+  * Forcing_meltwater_perturbation.ipynb
+  * Forcing_wind_perturbation.ipynb
+
 * Code to process all data in folder data_published/ used for plotting all figures
 
 * Code to calculate surface water mass transformation:
