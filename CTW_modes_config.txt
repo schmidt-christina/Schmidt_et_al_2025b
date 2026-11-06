@@ -1,0 +1,41 @@
+The modal structures and velocity of baroclinic coastal trapped waves are computed using a toolbox developed by Brink (2018) based on the mean stratification in CONTROL and cross-shelf topography. Use the folowing inputs to redo the calculation.
+
+Brink, K. (2018). Stable coastal-trapped waves with stratification, topography and mean flow [dataset].
+In Woods Hole Open Access Server (WHOAS) at the MBLWHOI Library. doi: 10.1575/1912/
+https://darchive.mblwhoilibrary.org/entities/publication/50dc38f7-de8f-545f-985d-4b01bcf7ed61
+
+
+How many total gridpoints do you want in the cross shelf direction? (nn) 100
+How many total gridpoints do you want in the vertical? (mm) 30
+First guess at frequency (rad/sec)? % Depends on the mode, for mode 1 its 1e-5, mode 2 1e-6, mode 3 2e-7
+Enter 0 for a rigid lid, 1 for a free surface (del) 1
+Enter 0 for a closed x= 0 boundary, 1 for open (icbc) 0
+Enter 0 for a closed x =xmax boundary, 1 for an open (iobc)1
+Enter 1 for general frequency, wavenumber or 0 for long wave limit 0
+Enter the Coriolis parameter (f) (rad/sec) -1.42e-4
+Enter the domain width (xmax) (km) 112
+Enter the nominal fractional accuracy for the solution (eps) 0.0001
+Enter the number of frequencies to be computed (npts) 1
+Enter the first alongshore wavenumber to use (rlz) (rad/cm) 1e-8
+How many distance, depth pairs will you provide (ndep >=1) 25
+Array of offshore distances for depth values (xdep in km) (dimension ndep) % see below: Distance
+Array of depths corresponding to xdep (depr in m) % see below: Topography 165E
+Number of distance, bottom friction pairs to read (nr) 1
+Offshore distances for bottom friction values (xr in km) 0
+Array of bottom friction values corresponding to xr (rr in cm/sec) 0.05
+Number of Nsquared values to read? (nnsq) 50
+Depth increment for input of Nsquared values? (zr in m) 10
+Exponential tail length for Nsquared extrapolation (alph in km) 1
+Nsquared values starting at the surface (nsqr in rad^2 /sec^2) (nnsq values) % see below: N2 165E
+Input peak value of mean alongshore flow (vzero: cm/sec) 0
+Enter 0 to skip pauses to see graphics, 1 to see graphics during execution 0
+
+
+Distance
+[  0.  ,   4.7 ,   9.39,  14.09,  18.79,  23.48,  28.18,  32.88, 37.57,  42.27,  46.97,  51.66,  56.36,  61.06,  65.75,  70.45, 75.15,  79.85,  84.54,  89.24,  93.94,  98.63, 103.33, 108.03, 112.72]
+
+Topography 165E
+[ 10., 125., 235., 235., 267., 288., 303., 318., 339., 372., 381., 378., 411., 445., 474., 492., 500., 500., 500., 500., 500., 500., 500., 500., 500.]
+
+N2 165E (mean all latitudes)
+[2.70084851e-06, 1.77794239e-04, 1.48021316e-04, 9.48225754e-05, 6.97754830e-05, 5.20270630e-05, 3.82260839e-05, 3.09197505e-05, 2.54993708e-05, 2.14630843e-05, 1.82672317e-05, 1.54292889e-05, 1.35294422e-05, 1.15857852e-05, 1.01431832e-05, 9.27908789e-06, 8.13007021e-06, 7.13576361e-06, 6.65924465e-06, 6.04548015e-06, 5.18744167e-06, 4.48605484e-06, 4.07219227e-06, 3.65835040e-06, 3.21787933e-06, 2.77408462e-06, 2.36158117e-06, 1.97336723e-06, 1.59412855e-06, 1.37519542e-06, 1.20957848e-06, 1.04693870e-06, 9.50821621e-07, 8.81190087e-07, 8.11558554e-07, 7.53833111e-07, 7.14056136e-07, 6.74289087e-07, 6.34348455e-07, 5.88728268e-07, 5.40363207e-07, 4.91998145e-07, 4.43703837e-07, 4.02432311e-07, 3.65418122e-07, 3.28403932e-07, 2.91389743e-07, 2.62265093e-07, 2.60121949e-07, 2.60121949e-07]
